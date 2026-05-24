@@ -170,8 +170,11 @@ public class Main {
         //Atividade 11
         System.out.println("---- ATIVIDADE 11 ----");
         Paciente Pac1 = new Paciente();
-        System.out.println("Índice de Massa corporal = " + Pac1.calcularIMC());
-        
+        Pac1.setNome("PedroBertoni");
+        Pac1.setPeso(86.0);
+        Pac1.setAltura(2.0);
+        System.out.println("Índice de Massa corporal de " + Pac1.getNome() + " = " + Pac1.calcularIMC());
+        Pac1.classificarIMC();
 
 
         System.out.println();
@@ -179,6 +182,11 @@ public class Main {
 
         //Atividade 12
         System.out.println("---- ATIVIDADE 12 ----");
+        ReservaHotel Res = new ReservaHotel();
+        Res.setNomeHospede("Guilherme Shimano");
+        Res.setValorReserva(100);
+        Res.setQuantidadeDiarias(365);
+        Res.exibirReserva();
 
 
         System.out.println();
@@ -186,6 +194,10 @@ public class Main {
 
         //Atividade 13
         System.out.println("---- ATIVIDADE 13 ----");
+        Jogador Jog = new Jogador();
+        Jog.setNome("Gusta Barbosa");
+        Jog.adicionarPontos(12345);
+        System.out.println("Nivel atual de " + Jog.getNome() + " = " + Jog.getNivel());
 
 
         System.out.println();
@@ -193,6 +205,14 @@ public class Main {
 
         //Atividade 14
         System.out.println("---- ATIVIDADE 14 ----");
+        Contato Con = new Contato();
+        Con.setNome("Pedro H Bertoni");
+        Con.setTelefone("44 98462-3978");
+        Con.setEmail("ra143345@uem.br");
+        Con.exibirContato();
+        System.out.println();
+        Con.alterarTelefone("12 67676-0000");
+        Con.exibirContato();
 
 
         System.out.println();
@@ -200,5 +220,37 @@ public class Main {
 
         //Atividade 15
         System.out.println("---- ATIVIDADE 15 ----");
+        LivroBiblioteca LivB1 = new LivroBiblioteca();
+        LivroBiblioteca LivB2 = new LivroBiblioteca();
+        LivroBiblioteca LivB3 = new LivroBiblioteca();
+        LivB1.setTitulo("Memorias Postumas");
+        LivB1.setAutor("Machado de Assis");
+        LivB1.setCodigo("12.111");
+
+        LivB2.setTitulo("Naruto");
+        LivB2.setAutor("Kishimoto");
+        LivB2.setCodigo("44.444");
+
+        LivB3.setTitulo("BokuNoHero");
+        LivB3.setAutor("Horikoshi");
+        LivB3.setCodigo("77.777");
+
+        LivB1.devolver();
+        LivB1.emprestar();
+
+        System.out.println();
+        LivB2.emprestar();
+        LivB2.devolver();
+
+        System.out.println();
+        LivB3.emprestar();
+        LivB3.emprestar();
+
+        System.out.println();
+        LivB1.exibirInformacoes();
+        System.out.println();
+        LivB2.exibirInformacoes();
+        System.out.println();
+        LivB3.exibirInformacoes();
     }
 }
